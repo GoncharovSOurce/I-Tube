@@ -15,6 +15,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  router: {
+    middleware: ['auth']
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -37,7 +40,8 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/router'
+    '@nuxtjs/router',
+    '@nuxtjs/auth'
   ],
   /*
   ** Nuxt.js modules
@@ -51,8 +55,30 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/font-awesome',
+    '@nuxtjs/auth'
 
   ],
+  auth: {
+    redirect: {
+      login: '/login', //указываються страницы которые будут открыты незареганому пользователю
+      home: '/'  //указываються страницы которые будут открыты незареганому пользователю
+    },
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/login',
+            method: 'post',
+            propertyName: 'accessToken'
+          },
+          // user: { url: '/login', method: 'get', propertyName: '' },
+          user: false,
+          logout: false
+        },
+        tokenRequired: true
+      }
+    }
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
