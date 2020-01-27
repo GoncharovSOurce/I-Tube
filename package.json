@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "api": "json-server --watch ./api/db.json --port 8080 -m ./node_modules/json-server-auth"
+    "api": "json-server --watch ./api/db.json --port 8080 -m ./node_modules/json-server-auth -r ./api/router.json"
   },
   "dependencies": {
     "@nuxtjs/auth": "^4.8.5",

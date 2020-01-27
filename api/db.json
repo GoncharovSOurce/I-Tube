@@ -1,5 +1,38 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "goncharovdima1010@gmail.com",
+      "password": "$2a$10$c.lWAg8gPajgazoxcyTLMu8GGriU5geDAKZZ5iEenajkwfTM8zkk2",
+      "firstName": "",
+      "lastName": "",
+      "lastname": "Dima",
+      "firstname": "gonc",
+      "id": 1
+    },
+    {
+      "email": "ivan@gmail.com",
+      "password": "$2a$10$sNDsrwDRv2X6Gv1P4fUTQuNiJXTh9MAQcbY5RETuIxKLiHlq2.uEG",
+      "firstName": "",
+      "lastName": "",
+      "name": "Иван ",
+      "id": 2
+    },
+    {
+      "email": "lehaAlexich@gmail.com",
+      "password": "$2a$10$K1Idjlb40UjS7bclHDcFGelI0aqhUwWEBni19OTLokr4KDdKgRnAq",
+      "firstName": "",
+      "lastName": "",
+      "name": "Leha71",
+      "id": 3
+    },
+    {
+      "email": "sanya@gmail.com",
+      "password": "$2a$10$elBjiSjlQTBWruoqEOS8GO/ijmWceO9hmOXzwY/ag4yVS4CeIorSO",
+      "firstName": "",
+      "lastName": "",
+      "name": "Sanya",
+      "id": 4
+    }
+  ],
   "groups": []
-
 }

@@ -1,8 +1,13 @@
 <template>
+  <div>
   <b-container class="d-flex justify-content-center">
-    <b-form class="auth-form">
+    <b-form @submit.prevent="onSubmit" class="auth-form">
+      <h2 class="text-center">
+        Авторизоваться
+      </h2>
+      <hr>
       <b-form-group
-          label ="Email address:"
+          label ="Email:"
           label-for ="email"
           >
           <b-form-input
@@ -25,26 +30,46 @@
           placeholder="Enter password..."
         />
       </b-form-group>
+
+      <b-button class="btn-block" type="submit" pill variant="primary">
+        Войти
+      </b-button>
+      <b-button class="btn-block" pill variant="secondary" >
+        Забыл пароль?
+      </b-button>
+      <nuxt-link :to="{ name: 'register' }" class="btn btn-link btn-block" tag="button">
+        Зарегистрироваться
+      </nuxt-link>
+
+
     </b-form>
   </b-container>
+  </div>
 </template>
 
 <script>
+
+
+    import TheHeader from "../components/TheHeader";
     export default {
-        name: "Login",
-        auth: false,
-        data: () => ({
+      name: 'Login',
+      components: { TheHeader, },
+      layout: 'empty' ,
+      data: () => ({
             form: {
-              email: ''
+              email: '',
+              password:''
             }
-        })
+      }),
+      methods: {
+        async onSubmit() {
+          await this.$auth.loginWith('local', { data: this.form } )
+        }
+      }
     }
 </script>
 
-<style scoped="scss">
-  .auth-form {
-    width: 450px;
-    padding-top: 200px;
-  }
+<style scoped>
 
 </style>
+
