@@ -31,7 +31,7 @@
         />
       </b-form-group>
 
-      <b-button class="btn-block" type="submit" pill variant="primary">
+      <b-button  class="btn-block" type="submit" pill variant="primary">
         Войти
       </b-button>
       <b-button class="btn-block" pill variant="secondary" >

@@ -32,6 +32,14 @@
       "lastName": "",
       "name": "Sanya",
       "id": 4
+    },
+    {
+      "email": "jeca@gmail.com",
+      "password": "$2a$10$bLgCDz.QyUli.B3imPDaMOlb8IZYkgKU9oTbu2/Giv9YXxgsc3nju",
+      "firstName": "",
+      "lastName": "",
+      "name": "jeca",
+      "id": 5
     }
   ],
   "groups": []

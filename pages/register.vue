@@ -7,7 +7,7 @@
       <hr>
 
       <b-form-group
-        label ="Логин:"
+        label ="Login:"
         label-for ="name"
       >
         <b-form-input
@@ -45,21 +45,8 @@
         />
       </b-form-group>
 
-      <b-form-group
-        label ="Password:"
-        label-for ="password"
-      >
-        <b-form-input
-          id="password"
-          v-model="form.password"
-          type="password"
-          required
-          placeholder="Enter password..."
-        />
-        </b-form-group>
 
-
-      <b-button :to="{ name: 'default' }" class="btn-block" type="submit" pill variant="primary">
+      <b-button class="btn-block" type="submit" pill variant="primary">
         Зарегистрироваться
       </b-button>
       <nuxt-link :to="{ name: 'login' }" class="btn btn-link btn-block" tag="button">
